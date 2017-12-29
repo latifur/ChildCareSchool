@@ -1,0 +1,304 @@
+/* --------------------------------------------------------
+Theme Name: ChildCare School HTML5 Template 
+Theme URI: latifur.github.io/ChildCareSchool
+Author: webbittle
+Author URI: http://themeforest.net/user/themeebit
+Version: 1.00
+Developed By: Md. Latifur Rahman
+
+Table of Index
+--------------
+1. Base Css
+2. Header Css
+3. Carousel Css
+4. Services Css
+5. Teacher Css
+6. Feature Css
+7. About-us Css
+8. Footer Css
+9. Go-top Css
+ --------------------------------------------------------*/
+
+
+/*--------------------------
+1. Base css goes
+---------------------------*/
+
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section:not(#carousel-slider) {
+  padding: 80px 0;
+  position: relative;
+}
+
+section:not(#carousel-slider)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 0;
+  border-bottom: 2px solid #eec400;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+section:last-of-type::after {
+  content: "" !important;
+  display: block;
+  border-bottom-color: transparent !important;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+a {
+  color: #eec400;
+}
+
+
+/*--------------------------
+2. Header css goes
+---------------------------*/
+
+.navbar {
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+
+.nav-scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+.nav-scrolled .navbar-brand {
+  color: #fff;
+}
+
+.nav-scrolled .navbar-nav>li>a {
+  color: #fff;
+}
+
+
+/*--------------------------
+3. Carousel css goes hare
+---------------------------*/
+
+#carousel-slider {
+  background-color: #ddd;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  overflow: hidden;
+}
+
+.item.active img {
+  transition: transform 5000ms linear 0s;
+  transform: scale(1.05, 1.05);
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+
+/*--------------------------
+4. Services css goes hare
+---------------------------*/
+
+#services figure {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+#services figure figcaption {
+  padding: 0 15px;
+}
+
+#services figure figcaption h3 {
+  font-size: 1.5em;
+}
+
+#services figure:hover h3 {
+  color: #5cf442;
+}
+
+
+/*--------------------------
+5. Teacher css goes hare
+---------------------------*/
+
+#teacher figure {
+  position: relative;
+  overflow: hidden;
+}
+
+#teacher figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  transition: left 0.15s 0.15s;
+}
+
+#teacher .fig-text {
+  position: absolute;
+  bottom: 20px;
+  left: -200%;
+  transition: left 0.15s;
+  padding-left: 20px;
+}
+
+#teacher .fig-text a {
+  color: #eec400;
+}
+
+#teacher figure:hover figcaption,
+#teacher figure:hover .fig-text {
+  left: 0;
+  transition-delay: 0;
+}
+
+#teacher figure:hover .fig-text {
+  transition-delay: 0.3s;
+}
+
+#teacher .isotope {
+  text-align: center;
+}
+
+.owl-prev,
+.owl-next {
+  margin: 0 10px;
+}
+
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+  margin: 0 auto;
+}
+
+
+/*--------------------------
+6. Feature css goes hare
+---------------------------*/
+
+.feature-items {
+  padding: 20px 10px;
+  clear: both;
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+.feature-items:hover {
+  background-color: #F9F9F9;
+  border-radius: 5px;
+}
+
+.feature-items i,
+.feature-item i {
+  display: inline-block;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #eec400;
+  overflow: hidden;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #eec400;
+  margin-bottom: 10px;
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+.feature-items:hover i,
+.feature-item:hover i {
+  color: #ffffff;
+  background: #eec400;
+}
+
+.feature-items h5 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.features-left,
+.features-right {
+  margin-top: 20px;
+}
+
+
+/*--------------------------
+7. About-us css goes hare
+---------------------------*/
+
+#about-us img {
+  margin-bottom: 15px;
+}
+
+#about-us p {
+  font-size: 1.3em;
+}
+
+
+/*--------------------------
+8. Footer css goes hare
+---------------------------*/
+
+footer {
+  background-color: #565759;
+  color: #fff;
+  padding: 15px;
+}
+
+
+/*--------------------------
+9. Go-top css goes hare
+---------------------------*/
+
+#go-top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 500;
+}
